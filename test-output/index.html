@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-POCSuite" class="navigator-link">
-              <span class="suite-name border-passed">POCSuite</span>
+              <span class="suite-name border-failed">POCSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-POCSuite" class="hide-methods failed suite-POCSuite"> (hide)</a> <!-- hide-methods failed suite-POCSuite -->
+                      <a href="#" panel-name="suite-POCSuite" class="show-methods failed suite-POCSuite"> (show)</a> <!-- show-methods failed suite-POCSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-POCSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-POCSuite" title="Amazon.TC_Banner01" class="method navigator-link" hash-for-method="LoginCheck({Description=Check Amazon banners, PostLogin=Pass, Url=Amazon, PocPassword=, TestName=Amazon Banner ...)">LoginCheck({Description=Check Amazon banners, PostLogin=Pass, Url=Amazon, PocPassword=, TestName=Amazon Banner ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-POCSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -112,11 +126,6 @@
                         <a href="#" panel-name="suite-POCSuite" title="Amazon.TC_TodaysDeals" class="method navigator-link" hash-for-method="Electronics({Description=Check Amazon TodaysDeals, PostLogin=Pass, Url=Amazon, PocPassword=, TestName=Amazon Tod...)">Electronics({Description=Check Amazon TodaysDeals, PostLogin=Pass, Url=Amazon, PocPassword=, TestName=Amazon Tod...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-POCSuite" title="Amazon.TC_Banner01" class="method navigator-link" hash-for-method="LoginCheck({Description=Check Amazon banners, PostLogin=Pass, Url=Amazon, PocPassword=, TestName=Amazon Banner ...)">LoginCheck({Description=Check Amazon banners, PostLogin=Pass, Url=Amazon, PocPassword=, TestName=Amazon Banner ...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                     </div> <!-- method-list-content passed suite-POCSuite -->
                   </li>
                 </ul>
@@ -129,9 +138,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-POCSuite" class="panel POCSuite">
-          <div class="suite-POCSuite-class-passed">
+          <div class="suite-POCSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">Amazon.TC_Banner01</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -141,10 +150,36 @@
                   </a> <!-- LoginCheck({Description=Check Amazon banners, PostLogin=Pass, Url=Amazon, PocPassword=, TestName=Amazon Banner ...) -->
                   <span class="method-name">LoginCheck</span>
                   <span class="parameters">({Description=Check Amazon banners, PostLogin=Pass, Url=Amazon, PocPassword=, TestName=Amazon Banner check, os=Windows, browser=Chrome, RunMode=Y, PocUsername=, os_version=10, browserVersion=latest})</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;i class=&quot;a-icon a-icon-next-rounded&quot;&gt;...&lt;/i&gt; is not clickable at point (1469, 224). Other element would receive the click: &lt;div id=&quot;nav-cover&quot; style=&quot;z-index: 1; height: 6517px; display: block;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=95.0.4638.54)
+Build info: version: &apos;4.0.0-beta-4&apos;, revision: &apos;29f46d02dd&apos;
+System info: host: &apos;CESIT-LAP-0177&apos;, ip: &apos;192.168.29.215&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [18c7be8b646603bb70fb2618fcefb542, clickElement {id=ae7464a0-5775-41fc-9a5f-8a157a25693d}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 95.0.4638.17 (a9d0719444d4b..., userDataDir: C:\Users\IMAMRA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60849}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60849/devtoo..., se:cdpVersion: 95.0.4638.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (18c7be8b646603bb70fb2618fcefb542)] -&gt; xpath: //*[@class=&apos;a-carousel-goto-nextpage&apos;]/i]
+Session ID: 18c7be8b646603bb70fb2618fcefb542
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:162)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:137)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:235)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:73)
+	at utility.Util.clickElement(Util.java:350)
+	at pageObject.AmazonPage.clickNextBanner(AmazonPage.java:33)
+	at Amazon.TC_Banner01.LoginCheck(TC_Banner01.java:62)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 17 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-POCSuite-class-passed -->
+          </div> <!-- suite-POCSuite-class-failed -->
           <div class="suite-POCSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -231,17 +266,17 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'AutomationCheck')
+data.setCell(0, 1, 'Electronics')
 data.setCell(0, 2, 'Amazon.TC_TodaysDeals')
-data.setCell(0, 3, 11083);
+data.setCell(0, 3, 11334);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Electronics')
+data.setCell(1, 1, 'AutomationCheck')
 data.setCell(1, 2, 'Amazon.TC_TodaysDeals')
-data.setCell(1, 3, 10095);
+data.setCell(1, 3, 9130);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'LoginCheck')
 data.setCell(2, 2, 'Amazon.TC_Banner01')
-data.setCell(2, 3, 3655);
+data.setCell(2, 3, 4503);
 window.suiteTableData['POCSuite']= { tableData: data, tableDiv: 'times-div-POCSuite'}
 return data;
 }
@@ -282,58 +317,60 @@ return data;
               <div class="chronological-class-name">Amazon.TC_TodaysDeals</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUpReport</span>
-                <span class="method-start">133 ms</span>
+                <span class="method-start">147 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">verifyTestExecution</span>
-                <span class="method-start">188 ms</span>
+                <span class="method-start">196 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">AutomationCheck({Description=Check Amazon TodaysDeals, PostLogin=Pass, Url=Amazon, PocPassword=, TestName=Amazon Tod...)</span>
-                <span class="method-start">191 ms</span>
+                <span class="method-start">199 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">getResult([TestResult name=AutomationCheck status=SUCCESS method=TC_TodaysDeals.AutomationCheck(java.util.Hash...)</span>
-                <span class="method-start">11279 ms</span>
+                <span class="method-start">9333 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">verifyTestExecution</span>
-                <span class="method-start">11287 ms</span>
+                <span class="method-start">9339 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">Electronics({Description=Check Amazon TodaysDeals, PostLogin=Pass, Url=Amazon, PocPassword=, TestName=Amazon Tod...)</span>
-                <span class="method-start">11288 ms</span>
+                <span class="method-start">9342 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">getResult([TestResult name=Electronics status=SUCCESS method=TC_TodaysDeals.Electronics(java.util.Hashtable)[p...)</span>
-                <span class="method-start">21385 ms</span>
+                <span class="method-start">20682 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">21386 ms</span>
+                <span class="method-start">20687 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Amazon.TC_Banner01</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUpReport</span>
-                <span class="method-start">22291 ms</span>
+                <span class="method-start">21667 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">verifyTestExecution</span>
-                <span class="method-start">22296 ms</span>
+                <span class="method-start">21672 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">LoginCheck({Description=Check Amazon banners, PostLogin=Pass, Url=Amazon, PocPassword=, TestName=Amazon Banner ...)</span>
-                <span class="method-start">22299 ms</span>
+                <span class="method-start">21676 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">getResult([TestResult name=LoginCheck status=SUCCESS method=TC_Banner01.LoginCheck(java.util.Hashtable)[pri:0,...)</span>
-                <span class="method-start">25955 ms</span>
+                <span class="method-name">getResult([TestResult name=LoginCheck status=FAILURE method=TC_Banner01.LoginCheck(java.util.Hashtable)[pri:0,...)</span>
+                <span class="method-start">26192 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">25956 ms</span>
+                <span class="method-start">27050 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

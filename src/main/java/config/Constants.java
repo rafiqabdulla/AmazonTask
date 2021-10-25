@@ -8,8 +8,7 @@ public class Constants {
 	public static final int DEFAULT_DURATION = 20; // seconds
 	public static final int DEFAULT_INTERVAL = 2000; // milliseconds
 	
-	public static final String BadgerObjectRepository = System.getProperty("user.dir")+"/src/test/resources/ObjectRepository/BadgerObjectRepository.properties";
-	public static final String AmazonRepository = System.getProperty("user.dir")+"/src/test/resources/Amazon/amazon.properties";
+	public static final String AmazonRepository = System.getProperty("user.dir")+"/src/test/resources/ObjectRepository/amazon.properties";
 
 	/*** Docker hub url ***********/
 	public static final String HUB_URL = "http://localhost:4444";

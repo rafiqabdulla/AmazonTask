@@ -1,1 +1,6 @@
 /target/
+/test-output/
+/ExtentReport/
+.settings
+.DS_Store
+.classpath

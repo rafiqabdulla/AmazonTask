@@ -36,9 +36,9 @@ public class TC_TodaysDeals extends BaseClass {
 	@BeforeTest()
 	public void setUpReport() throws IOException {
 		if (spark == null)
-			initiateReport();
+			initiateReport(); // Report Generation 
 		spark.start();
-		test = report.createTest(testName).assignAuthor(System.getProperty("user.name")).assignCategory("LOGIN");
+		test = report.createTest(testName).assignAuthor(System.getProperty("user.name")).assignCategory("LOGIN");  // Test Start from here
 	}
 
 	@BeforeMethod()
@@ -84,8 +84,8 @@ public class TC_TodaysDeals extends BaseClass {
 
 			page
 			.setBrowserStackCap(data, "Badger")
-			.launchInstance(data.get("browser"));
-			page.openApplication(data.get("Url"));
+			.launchInstance(data.get("browser")); //  To launch browser
+			page.openApplication(data.get("Url")); // To launch URL
 			page.electronics();
 			page.headPhones();
 			page.firstheadPhone();

@@ -27,7 +27,7 @@ public class Constants {
 	
 	//Path
 	public static final String SCREENSHOT= "target//Screenshot";
-	public static final String DATAFILE = System.getProperty("user.dir")+"//src//test//resources//dataRepository//Badger.xlsx";
+	public static final String DATAFILE = System.getProperty("user.dir")+"//src//test//resources//dataRepository//Resource.xlsx";
 
 	//All the Excel Related Values
 	public static final String TESTCASES_SHEET = "TestCases";
